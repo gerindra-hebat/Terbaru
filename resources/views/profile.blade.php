@@ -1,6 +1,6 @@
-@extends("sidebar")
+@extends("Layout/main")
 @section("konten")
-<div class="container-fluid">
+<!-- <div class="container-fluid">
     <div class="row">
         <div class="col-auto col-md-3 col-xl- px-sm-2 px-0 sidebar">
             <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-dark min-vh-100">
@@ -13,7 +13,7 @@
                         <a href="#" class="nav-link align-middle px-0">
                             <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline text-dark">Profile</span>
                         </a>
-                    </li>
+                    </li> -->
                     <!-- <li>
                         <a href="#submenu1" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
                             <i class="fs-4 bi-speedometer2"></i> <span class="ms-1 d-none d-sm-inline">Dashboard</span> </a>
@@ -60,7 +60,7 @@
                             </li>
                         </ul>
                     </li> -->
-                    <li>
+                    <!-- <li>
                         <a href="#" class="nav-link px-0 align-middle">
                             </i> <span class="ms-1 d-none d-sm-inline text-dark">Document</span> </a>
                     </li>
@@ -73,7 +73,7 @@
                             <span class=" tombol ms-1 d-none d-sm-inline">Pengajuan Pendaftaran</span> </a>
                     </li>
                 </ul>
-                <hr>
+                <hr> -->
                 <!-- <div class="dropdown pb-4">
                     <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
                         <img src="https://github.com/mdo.png" alt="hugenerd" width="30" height="30" class="rounded-circle">
@@ -89,8 +89,8 @@
                         <li><a class="dropdown-item" href="#">Sign out</a></li>
                     </ul>
                 </div> -->
-            </div>
-        </div>
+            <!-- </div>
+        </div> -->
         <!-- content area -->
         <div class="col py-3">
            
@@ -108,32 +108,40 @@
                 <div class="col-6 mx-5 g-3">
                     <form>
                         <div class="form-group">
-                            <input type="email" class="profilform" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Username">
+                            <input type="email" class="profilform" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nama">
                         </div>
                         <br>
                         <div class="form-group">
-                            <input type="email" class="profilform" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Name">
+                            <input type="email" class="profilform" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Tanggal Lahir">
                         </div>
                         <br>
                         <div class="form-group">
-                            <input type="email" class="profilform" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
+                            <input type="email" class="profilform" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Alamat">
                         </div>
                         <br>
                         <div class="form-group">
-                            <input type="email" class="profilform" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Password">
+                            <input type="email" class="profilform" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="No Telepon">
                         </div>
                         <br>
                         <div class="form-group">
-                            <input type="email" class="profilform" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Re-enter password">
+                            <input type="email" class="profilform" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Latar Belakang Pekerjaan">
                         </div>
                         <br>
-                        <button type="submit" class="sbmt">Sign UP</button>
+                        <div class="form-group">
+                            <input type="email" class="profilform" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Organisai Yang  di Ikuti">
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <input type="email" class="profilform" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Jaringan Togas/Tomas Yang di Kenal">
+                        </div>
+                        <br>
+                        <button type="submit" class="sbmt">Simpan</button>
                         <br>
                 </div>
                 </form>
             </div>
         </div>
     </div>
-</div>
-</div>
+<!-- </div>
+</div> -->
 @endsection

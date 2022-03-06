@@ -28,7 +28,7 @@
             </span>
         </div>
     </nav>
-
+    <div>
     <div class="row " style="width: 100%;">
         <div class="col-3 sidebar ">
             <div class="row my-3 mx-3">
@@ -69,6 +69,7 @@
             </div>
         </div>
     </div>
+</div>
 
     <footer>
         <div class="fot">

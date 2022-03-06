@@ -1,6 +1,6 @@
 @extends("Layout/main")
 @section('konten')
-    <div class="container">
+    <div class="container" >
         <!-- content area -->
         {{-- all title use h3 and header class!!! --}}
         <h3 class="header">STATUS PENDAFTARAN</h3>
