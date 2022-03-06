@@ -28,6 +28,7 @@ body {
 }
 
 .navbar {
+    position: sticky;
     box-shadow: 0px 0.1995030641555786px 4.987576484680176px 0px #00000007;
     box-shadow: 0px 0.6700892448425293px 16.75223159790039px 0px #0000000b;
     box-shadow: 0px 3px 75px 0px #00000012;
@@ -113,11 +114,15 @@ body {
 }
 
 .sbmt {
-    background: var(--maincolor);
-    border-radius: 10px;
-    border: rgba(0, 0, 0, 0.5);
-    padding: 5px 40px;
-    color: white;
+    background: var(--maincolor) !important;
+    border-radius: 10px !important;
+    border: rgba(0, 0, 0, 0.5) !important;
+    padding: 5px 40px !important;
+    color: white !important;
+}
+
+.sbmt:hover{
+    background-color: #a00909 !important;
 }
 
 .su {
@@ -146,17 +151,16 @@ body {
 /* DASHBOARD USER */
 
 .user1 {
-    padding-bottom: 100px;
+    padding-top: 3em;
+    padding-bottom: 15em;
 }
 
 .profil {
     border-radius: 50%;
-    display: flex;
     width: 96px;
     height: 96px;
     align-items: center;
-    justify-content: center;
-    text-align: center;
+    justify-content: center !important;
 }
 
 .db {
@@ -308,11 +312,12 @@ div.content {
 
 .profilform {
     background: #e5e5e5;
-    border: rgba(0, 0, 0, 0.5);
+    background-color: #e5e5e5;
+    border: 2px solid #ccc !important;
     padding: 10px 40px;
     width: 100%;
     text-align: left;
-    border-radius: 20px;
+    border-radius: 4px;
 }
 
 .profilform:focus {
@@ -320,12 +325,29 @@ div.content {
 }
 
 input::placeholder {
-    color: red;
+    color: #757575;
     font-size: 18px;
     justify-content: flex-start;
     font-style: italic;
     text-align: left;
 }
+.txtarea {
+    width: 100%;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc !important;
+    border-radius: 4px !important;
+    background-color: #e5e5e5 !important;
+    font-size: 16px;
+    resize: none;
+  }
+
+  .txtarea::after{
+    border: 2px solid red !important;   
+    border-radius: 20px !important;
+  }
+
 
 .row h1 {
     padding-left: 1.6rem;
@@ -344,38 +366,45 @@ input::placeholder {
 }
 
 .tombol {
-    border-radius: 10px;
-    background-color: #db1d1d;
-    color: #e5e5e5;
-    font-weight: 700;
+    border-radius: 10px !important;
+    background-color: #db1d1d !important;
+    color: #e5e5e5 !important;
+    font-weight: 700 !important;
 }
 
 .tombol:hover {
-    background-color: #a00909;
-    color: #e4e4e4;
+    background-color: #a00909 !important;
+    color: #e4e4e4 !important;
 }
 
 .tomboldaftar {
-    border-radius: 10px;
-    background-color: #db1d1d;
-    color: #e5e5e5;
-    font-weight: 700;
+    border-radius: 10px !important;
+    background-color: #db1d1d !important;
+    color: #e5e5e5 !important;
+    font-weight: 700 !important;
 }
 
 .tomboldaftar:hover {
-    background-color: #a00909;
-    color: #e4e4e4;
+    background-color: #a00909 !important;
+    color: #e4e4e4 !important;
 }
 
 
 /* Dokumen */
 
 .form-control {
-    border: rgba(0, 0, 0, 0.5);
-    padding: 10px 40px;
-    width: 100%;
-    text-align: left;
-    border-radius: 20px;
+    background-color: var(--sdcolor) !important;
+    border-radius: 20px !important;
+    color: rgb(126, 126, 126) !important;
+    
+}
+
+.form-check{
+  background-color: #e8e8e8 !important;
+  padding: 30px !important;
+  padding-left: 70px !important;
+  padding-right: 70px !important;
+  border-radius: 20px !important;
 }
 
 
@@ -396,3 +425,55 @@ input::placeholder {
     padding-top: 2em;
     padding-bottom: 1em;
 }
+
+.card{
+    background: #FFFFFF !important;
+    box-shadow: 0px 11px 80px rgba(0, 0, 0, 0.07), 0px 4.01518px 29.2013px rgba(0, 0, 0, 0.0482987), 0px 1.9493px 14.1767px rgba(0, 0, 0, 0.0389404), 0px 0.955581px 6.94968px rgba(0, 0, 0, 0.0310596), 0px 0.377838px 2.74791px rgba(0, 0, 0, 0.0217013) !important;
+    border-radius: 20px !important;
+    border: 0px !important;
+}
+
+/* Mobile */
+
+/* navbar  */
+@media screen and (max-width: 1280px) {
+    .navbar{
+        width:100%;
+    }
+    .container1{
+       
+        /* width: 100%;
+        display: row !important;
+        margin: 20px auto;
+        justify-content: center !important;
+        align-items: center !important;
+         */
+         width: 100% !important;
+         display:flex !important;
+         flex-direction: column !important;
+         margin-left: 30px;
+         justify-content: center !important;
+         align-items: center !important;
+
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+    .sidebar a {
+        float: left;
+    }
+    div.content {
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .sidebar a {
+        text-align: center;
+        float: none;
+    }
+}
+

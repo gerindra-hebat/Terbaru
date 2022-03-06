@@ -14,7 +14,7 @@
                             <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline text-dark">Profile</span>
                         </a>
                     </li> -->
-                    <!-- <li>
+<!-- <li>
                         <a href="#submenu1" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
                             <i class="fs-4 bi-speedometer2"></i> <span class="ms-1 d-none d-sm-inline">Dashboard</span> </a>
                         <ul class="collapse show nav flex-column ms-1" id="submenu1" data-bs-parent="#menu">
@@ -26,7 +26,7 @@
                             </li>
                         </ul>
                     </li> -->
-                    <!-- <li>
+<!-- <li>
                         <a href="#" class="nav-link px-0 align-middle">
                             <i class="fs-4 bi-table"></i> <span class="ms-1 d-none d-sm-inline">Orders</span></a>
                     </li>
@@ -42,7 +42,7 @@
                             </li>
                         </ul>
                     </li> -->
-                    <!-- <li>
+<!-- <li>
                         <a href="#submenu3" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
                             <i class="fs-4 bi-grid"></i> <span class="ms-1 d-none d-sm-inline">Products</span> </a>
                         <ul class="collapse nav flex-column ms-1" id="submenu3" data-bs-parent="#menu">
@@ -60,7 +60,7 @@
                             </li>
                         </ul>
                     </li> -->
-                    <!-- <li>
+<!-- <li>
                         <a href="#" class="nav-link px-0 align-middle">
                             </i> <span class="ms-1 d-none d-sm-inline text-dark">Document</span> </a>
                     </li>
@@ -74,7 +74,7 @@
                     </li>
                 </ul>
                 <hr> -->
-                <!-- <div class="dropdown pb-4">
+<!-- <div class="dropdown pb-4">
                     <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
                         <img src="https://github.com/mdo.png" alt="hugenerd" width="30" height="30" class="rounded-circle">
                         <span class="d-none d-sm-inline mx-1">loser</span>
@@ -89,59 +89,84 @@
                         <li><a class="dropdown-item" href="#">Sign out</a></li>
                     </ul>
                 </div> -->
-            <!-- </div>
+<!-- </div>
         </div> -->
-        <!-- content area -->
-        <div class="col py-3">
-           
-            <div class="row">
-            <h1>Profile</h1>
-                <div class="col-3 mx-3">
-                
-                    <div class="card" style="width: 100%;">
-                        <img src="{{asset('img/Foto.png') }}" class="cardimg" alt="...">
-                        <div class="card-body">
-                            <a href="#" class="btncard">Unggah Foto</a>
-                        </div>
+<!-- content area -->
+<div class="col py-3">
+
+    <div class="row">
+        <h3 class="header">Profile</h3>
+        <div class="col-3 mx-3">
+            <form>
+                <div class="card" style="width: 100%;">
+                    <img src="{{asset('img/Foto.png') }}" class="cardimg" alt="..." id="preview">
+                    <div class="card-body">
+                        <input type="file" class="btncard form-control" id="image">
+                        <!-- <a href="#" class="btncard"></a> -->
                     </div>
-                </div>  
-                <div class="col-6 mx-5 g-3">
-                    <form>
-                        <div class="form-group">
-                            <input type="email" class="profilform" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nama">
-                        </div>
-                        <br>
-                        <div class="form-group">
-                            <input type="email" class="profilform" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Tanggal Lahir">
-                        </div>
-                        <br>
-                        <div class="form-group">
-                            <input type="email" class="profilform" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Alamat">
-                        </div>
-                        <br>
-                        <div class="form-group">
-                            <input type="email" class="profilform" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="No Telepon">
-                        </div>
-                        <br>
-                        <div class="form-group">
-                            <input type="email" class="profilform" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Latar Belakang Pekerjaan">
-                        </div>
-                        <br>
-                        <div class="form-group">
-                            <input type="email" class="profilform" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Organisai Yang  di Ikuti">
-                        </div>
-                        <br>
-                        <div class="form-group">
-                            <input type="email" class="profilform" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Jaringan Togas/Tomas Yang di Kenal">
-                        </div>
-                        <br>
-                        <button type="submit" class="sbmt">Simpan</button>
-                        <br>
                 </div>
-                </form>
-            </div>
         </div>
+        <div class="col-6 mx-5 g-3">
+
+            <!-- <div class="form-floating">
+                    <input type="text" class="profilform" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nama" name="nama">
+                    <label for="floatingInput">Email address</label>
+                </div> -->
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="floatingInput" placeholder="Nama" name="nama">
+                <label for="floatingInput">Nama</label>
+            </div>
+
+            <br>
+            <!-- <div class="form-group">
+                    <input type="date" class="profilform" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Tanggal Lahir" name="tanggal">
+                </div> -->
+            <div class="form-floating mb-3">
+                <input type="date" class="form-control" id="floatingInput" placeholder="date" name="date">
+                <label for="floatingInput">Tanggal Lahir</label>
+            </div>
+            <br>
+            <!-- <div class="form-group">
+                    <input type="tel" class="profilform" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="No Telepon" name="telp">
+                </div> -->
+            <div class="form-floating mb-3">
+                <input type="tel" class="form-control" id="floatingInput" placeholder="Nomor Telepon" name="telp">
+                <label for="floatingInput">Nomor Telepon</label>
+            </div>
+            <br>
+            <!-- <div class="form-group">
+                            <input type="text" class="profilform" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Latar Belakang Pekerjaan">
+                        </div> -->
+            <div class="form-floating">
+                <textarea class="form-control txtarea" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+                <label for="floatingTextarea2">Alamat</label>
+            </div>
+            <br>
+            <!-- <div class="form-group">
+                            <input type="email" class="profilform" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Organisai Yang  di Ikuti">
+                        </div> -->
+            <div class="form-floating">
+                <textarea class="form-control txtarea" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+                <label for="floatingTextarea2">Latar Belakang Pekerjaan</label>
+            </div>
+            <br>
+            <!-- <div class="form-group">
+                            <input type="email" class="profilform" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Jaringan Togas/Tomas Yang di Kenal">
+                        </div> -->
+            <div class="form-floating">
+                <textarea class="form-control txtarea" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+                <label for="floatingTextarea2">Jaringan Togas/Tomas Yang di Kenal</label>
+            </div>
+            <br>
+            <button type="submit" class="sbmt">Simpan</button>
+            <br>
+        </div>
+        </form>
     </div>
+</div>
+</div>
 <!-- </div>
 </div> -->
+
+
 @endsection

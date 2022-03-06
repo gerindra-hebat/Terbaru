@@ -28,12 +28,20 @@
   <!-- Nucleo Icons -->
   <link href="{{asset('Template/assets/css/nucleo-icons.css')}}"rel="stylesheet" />
   <link href="{{asset('Template/assets/css/nucleo-svg.css')}}" rel="stylesheet" />
+	<link rel="stylesheet" type="text/css" 
+     href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
   <!-- Font Awesome Icons -->
   <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
   <!-- Material Icons -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+  <link href="https://cdn.datatables.net/plug-ins/1.10.15/integration/font-awesome/dataTables.fontAwesome.css" rel="stylesheet">
+  <link href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css" rel="stylesheet">
+  
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0- 
+     alpha/css/bootstrap.css" rel="stylesheet">
   <!-- CSS Files -->
   <link id="pagestyle" href="{{asset('Template/assets/css/material-dashboard.css?v=3.0.0')}}" rel="stylesheet" />
+  <link rel="stylesheet" href="{{asset('Template/assets/toastr/toastr.min.css')}}">
 </head>
 
 <body class="g-sidenav-show  bg-gray-200">
@@ -57,7 +65,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white " href="./pages/tables.html">
+          <a class="nav-link text-white " href="{{('/pages/tables.html')}}">
             <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
               <i class="material-icons opacity-10">table_view</i>
             </div>
@@ -292,11 +300,49 @@
     </div>
   </div>
   <!--   Core JS Files   -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!-- <script src="https://code.jquery.com/jquery-3.5.1.js"></script> -->
+  <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js"></script>
   <script src="{{asset('Template/assets/js/core/popper.min.js')}}"></script>
   <script src="{{asset('Template/assets/js/core/bootstrap.min.js')}}"></script>
   <script src="{{asset('Template/assets/js/plugins/perfect-scrollbar.min.js')}}"></script>
   <script src="{{asset('Template/assets/js/plugins/smooth-scrollbar.min.js')}}"></script>
   <script src="{{asset('Template/assets/js/plugins/chartjs.min.js')}}"></script>
+  <script src="{{asset('Template/assets/toastr/toastr.min.js')}}"></script>
+  <script src="{{asset('Template/assets/toastr/toastr.min.js')}}"></script>
+  <script>
+    $(document).ready(function() {
+      // $('#tabel-1').DataTable({
+      // pagingType: 'input',
+      // pageLength: 5,
+      // language: {
+      // oPaginate: {
+      //   sNext: '<i class="fa fa-forward"></i>',
+      //   sPrevious: '<i class="fa fa-backward"></i>',
+      //   sFirst: '<i class="fa fa-step-backward"></i>',
+      //   sLast: '<i class="fa fa-step-forward"></i>'
+      //   }
+      //   }  
+      //   })
+    $('#tabel-1').DataTable({
+      "paging": true,
+      "lengthChange": true,
+      "searching": true,
+      "ordering": true,
+      "info": true,
+      "autoWidth": true,
+      
+      // "pagingType": 'input',
+      "oPaginate": {
+        sNext: '<i class="fa fa-forward"></i>',
+        sPrevious: '<i class="fa fa-backward"></i>',
+        sFirst: '<i class="fa fa-step-backward"></i>',
+        sLast: '<i class="fa fa-step-forward"></i>'
+        }
+    });
+    } );
+  </script>
   <script>
     var ctx = document.getElementById("chart-bars").getContext("2d");
 
@@ -542,6 +588,11 @@
     });
   </script>
   <script>
+  $( document ).ready(function() {
+      toastr.success('Haloo')
+  });
+  </script>
+  <script>
     var win = navigator.platform.indexOf('Win') > -1;
     if (win && document.querySelector('#sidenav-scrollbar')) {
       var options = {
@@ -554,6 +605,12 @@
   <script async defer src="https://buttons.github.io/buttons.js"></script>
   <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
   <script src="{{asset('Template/assets/js/material-dashboard.min.js?v=3.0.0')}}"></script>
+  
+	
+    
+
+	
+    
 </body>
 
 </html>

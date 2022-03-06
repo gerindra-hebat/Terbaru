@@ -9,10 +9,11 @@
         integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous">
     </script>
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('/Style/css/bootstrap.min.css') }}">
     <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/sidebars/">
     <title>Gerindra</title>
 </head>
@@ -20,11 +21,12 @@
 <body>
     <nav class="navbar sticky-top">
         <div class="container">
-            <a class="navbar-brand" href="#"><img src="{{ asset('img/logo.png') }}" alt="" width="52" height="63"
+            <a class="navbar-brand" href="/"><img src="{{ asset('img/logo.png') }}" alt="" width="52" height="63"
                     class="logo d-inline-block align-text-top">
             </a>
             <span class="navbar-text">
-                <button type="button" class="btn tombol ">Login</button>
+                <a href="" class="btn tombol">Login</a>
+                <!-- <button type="button" class="btn tombol">Login</button> -->
             </span>
         </div>
     </nav>
@@ -36,28 +38,28 @@
                     <img class="profil" src="{{ asset('img/Foto.png') }}" alt="">
                 </div>
                 <div class="col d-flex justify-content-center py-3">
-                    <p class="text-center fw-bold">Haris Adiyatma Farhan</p>
+                    <p class="text-center fw-bold">Haris Adiyatma</p>
                 </div>
             </div>
 
             <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start mx-5"
                 id="menu">
                 <li class="nav-item">
-                    <a href="#" class="nav-link align-middle px-0">
+                    <a href="/profile" class="nav-link align-middle px-0">
                         <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline text-dark">Profile</span>
                     </a>
                 </li>
 
                 <li>
-                    <a href="#" class="nav-link px-0 align-middle">
+                    <a href="/doc" class="nav-link px-0 align-middle">
                         </i> <span class="ms-1 d-none d-sm-inline text-dark">Document</span> </a>
                 </li>
                 <li>
-                    <a href="#" class="nav-link px-0 align-middle">
+                    <a href="/status" class="nav-link px-0 align-middle">
                         <span class="ms-1  d-none d-sm-inline text-dark">Status Pendaftaran</span> </a>
                 </li>
                 <li>
-                    <a href="#" class="nav-link px-0 align-middle">
+                    <a href="/pengajuan" class="nav-link px-0 align-middle">
                         <span class=" tomboldaftar btn">Pengajuan Pendaftaran</span> </a>
                 </li>
             </ul>
@@ -107,9 +109,36 @@
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
-    </script>
+    </script> -->
+    <script src="{{ asset('/Style/js/popper.min.js') }}" type="text/javascript"></script>
+<script src="{{ asset('/Style/js/bootstrap.bundle.min.js') }}" type="text/javascript"></script>
+<script src="{{ asset('/Style/js/bootstrap.bundle.js') }}" type="text/javascript"></script>
+<script src="{{ asset('/style/js/bootstrap.min.js') }}" type="text/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
+<script type="text/javascript">
+
+        $(document).ready(function (e) {
+
+
+           $('#image').change(function(){
+
+            let reader = new FileReader();
+
+            reader.onload = (e) => {
+
+              $('#preview').attr('src', e.target.result);
+            }
+
+            reader.readAsDataURL(this.files[0]);
+
+           });
+
+        });
+
+        </script>
+
 </body>
 
 </html>
